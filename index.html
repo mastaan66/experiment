@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        form {
+            height: 500px;
+            width: 700px;
+            background-color: black;
+            color: white;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 15px 15px 10px grey;
+            font-size: larger;
+            padding: 40px;
+            
+        }
+        #myform:hover {
+            background-color: grey;
+            color: black;
+        }
+
+        #name, #email, #password {
+            margin: 10px 80px;
+            font-size: larger;
+            height: 25px;
+            width: 60%;
+            height: 30px;
+            border-radius: 25px;
+            border: 2px solid black;
+        }
+
+        #button:hover {
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <center><h1>Registration</h1></center>
+    <form id="myform">
+        <label for="name" style="font-size: larger;">Name: </label>
+        <input type="text" name="name" id="name" required>
+        <br/>
+        <br/>
+        <br/>
+        <label for="email" style="font-size: larger;">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <br/>
+        <br/>
+        <br/>
+        <label for="password" style="font-size: larger;">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <br/>
+        <br/>
+        <br/>
+        <input type="button" value="submit" id="button" style="font-size: larger; border-radius: 5px; background-color: green; color: black; margin: auto 270px;">
+    </form>
+</body>
+<script>
+    document.getElementById("button").addEventListener("click", function () {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        alert("registration successfull")
+        console.log(name + email + password);
+        setTimeout(() => {
+            window.location.reload();
+        }, 2000);
+    });
+</script>
+
+</html>
